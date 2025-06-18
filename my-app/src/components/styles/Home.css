@@ -1,0 +1,9 @@
+#pic {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 1%;
+    margin-bottom: 0.1%;
+    padding-left: 1.2%;
+    padding-right: 1.65%;
+}
