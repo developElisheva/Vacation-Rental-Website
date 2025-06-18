@@ -1,0 +1,57 @@
+#navA {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+}
+
+#navB {
+    height: 30px;
+    display: flex;
+    /* justify-content: space-around; */
+    /* ריווח שווה בין הכפתורים */
+    padding: 10px;
+    background-color: black;
+}
+
+.nav-button {
+    position: relative;
+    /* הכרחי למיקום ה-::after */
+    background: none;
+    border: none;
+    color: white;
+    /* צבע הכפתור */
+    cursor: pointer;
+    /* מצביע על כך שזה כפתור */
+    font-size: 16px;
+    /* גודל טקסט */
+    /* padding-bottom: 50%; */
+}
+
+.nav-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    /* המרחק מתחת לטקסט */
+    height: 2px;
+    /* גובה הקו */
+    background: white;
+    /* צבע הקו */
+    transform: scaleX(0);
+    /* התחלה ב-0 */
+    transition: transform 0.3s ease;
+    /* אנימציה חלקה */
+}
+
+.nav-button:hover::after {
+    transform: scaleX(1);
+    /* ממלא את הקו כאשר מעבירים את העכבר */
+}
+
+#navA,
+#navB {
+    direction: rtl;
+}
